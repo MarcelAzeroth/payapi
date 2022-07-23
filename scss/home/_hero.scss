@@ -6,6 +6,7 @@
   margin-bottom: 5rem;
   position: relative;
   z-index: 5;
+  overflow-x:hidden;
 
   @include tablet {
     padding: 0 6.125rem;
@@ -111,12 +112,4 @@
   }
 }
 
-//Pattern styling.
-.header__circle {
-  width: 780px;
-  height: 780px;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  top: 0;
-  opacity: 0.7;
-}
+

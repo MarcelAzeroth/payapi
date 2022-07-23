@@ -13,6 +13,10 @@ html, body {
     height: 100%;
   }
 
+  html{
+    overflow: auto;
+  }
+
 body{
     font-family: 'Public Sans', sans-serif;
     background-color: #EDF3F8;
@@ -73,3 +77,14 @@ a {
 .pattern{
     position: absolute;
 }
+
+//Pattern styling.
+.header__circle {
+    width: 780px;
+    height: 780px;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    top: 0;
+    opacity: 0.7;
+    z-index: 1;
+  }

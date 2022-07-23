@@ -2,7 +2,6 @@
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <header>
             <nav class="navbar">
                 <div class="navbar__logo">
                 <a href="/">
@@ -26,7 +25,6 @@ class Header extends HTMLElement {
                     <img src="./assets/shared/mobile/menu.svg" alt="">
                 </div>
             </nav>
-        </header>
         `;
   }
 }
