@@ -1,0 +1,247 @@
+.contact {
+
+  @include desktop{
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+  }
+  &__headline {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 112%;
+    letter-spacing: -0.25px;
+    color: $blue-juan;
+    padding: 0 1.5rem;
+
+    @include tablet{
+      font-size: 3rem;
+      line-height: 117%;
+      letter-spacing: -0.37px;
+      max-width: 573px;
+      margin: 4.68rem auto 3.375rem;
+    }
+    @include desktop{
+      text-align: left;
+      font-size: 3.5rem;
+      width: 730px;
+      margin: 5.125rem auto 2.625rem 10.25rem;
+      padding: 0;
+    }
+    
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.375rem;
+    margin: 0 1.5rem;
+
+    @include tablet{
+      max-width: 445px;
+      margin: auto;
+    }
+    @include desktop{
+      
+      margin: 0 auto 0 10.25rem;
+    }
+
+    &__textfield {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $blue-juan;
+      padding: 0 1.25rem 1.06rem;
+
+      font-size: 0.9rem;
+      color: $blue-juan;
+      line-height: 167%;
+      letter-spacing: -0.11px;
+
+      width: 100%;
+
+      &::placeholder {
+        color: $blue-juan;
+        opacity: 0.5;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__message {
+      font-family: "Public Sans";
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $blue-juan;
+      padding: 0 1.25rem;
+      resize: vertical;
+
+      font-size: 0.9rem;
+      color: $blue-juan;
+      line-height: 167%;
+      letter-spacing: -0.11px;
+
+      width: 100%;
+
+      &::placeholder {
+        color: $blue-juan;
+        opacity: 0.5;
+        font-size: 0.9rem;
+        line-height: 167%;
+        letter-spacing: -0.11px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    &__checkboxfield {
+      display: flex;
+      align-items: center;
+
+      &__checkbox {
+        appearance: none;
+        background-color: $blue-juan;
+        height: 24px;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+        &:after {
+          font: var(--fa-font-solid);
+          content: "\f00c";
+          color: white;
+          display: none;
+        }
+        &:checked {
+          background-color: $pink-dark;
+        }
+        &:checked:after {
+          display: block;
+        }
+      }
+      &__label {
+        font-size: 0.9rem;
+        color: $blue-juan;
+        line-height: 167%;
+        letter-spacing: -0.11px;
+        margin-left: 1.5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &__button {
+      border: none;
+      border: 1px solid $blue-juan;
+      background-color: transparent;
+      font-size: 0.9rem;
+      letter-spacing: -0.11px;
+      font-weight: 700;
+      color: $blue-juan;
+      padding: 1rem 3.125rem;
+      border-radius: 24px;
+      margin-right: auto;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-juan;
+        color: $white-link;
+      }
+    }
+  }
+
+  &__credentials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+
+    @include desktop{
+      position: absolute;
+      right: 25px;
+      top: 300px;
+    }
+
+    &__headline {
+      text-align: center;
+      color: $blue-juan;
+      font-size: 2rem;
+      line-height: 133%;
+      letter-spacing: -0.18px;
+      opacity: 0.75;
+      padding: 0 1.5rem;
+
+      @include tablet{
+        font-size: 1.5rem;
+        max-width: 445px;
+        margin: 2.8rem auto;
+      }
+      @include desktop{
+        text-align: left;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+      width: 282px;
+      margin: 2rem auto 5rem;
+
+      @include tablet{
+        width: 541px;
+      }
+      @include desktop{
+        justify-content: flex-start;
+        width: 700px;
+      }
+
+    }
+  
+    &__logo img{
+      @include tablet{
+        width: 130px;
+      }
+      @include desktop{
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+//Error Styling
+
+//Error Messages
+.contact__label {
+  position: relative;
+  &__error {
+    position: absolute;
+    color: #ff0000;
+    font-size: 0.687rem;
+    letter-spacing: -0.08px;
+    line-height: 13px;
+    bottom: -1.5rem;
+    left: 1.25rem;
+  }
+}
+
+//Error States
+.hide {
+  display: none;
+}
+
+.error-state {
+  border-bottom: 1px solid #ff0000;
+  &::placeholder {
+    color: #ff0000;
+  }
+}

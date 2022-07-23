@@ -1,0 +1,70 @@
+.benefits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem 1.5rem;
+
+    @include tablet{
+        padding: 6.25rem 10.25rem;
+        gap: 6.25rem;
+    }
+    @include desktop{
+        max-width: 1440px;
+        margin: auto;
+        gap: 9rem;
+    }
+
+    &__implement, 
+    &__ui{
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 7.8rem;
+        }
+    }
+    &__ui{
+        @include desktop{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__asset{
+        margin: auto;
+        max-width: 290px;
+
+        @include tablet{
+            max-width: 320px;
+        }
+        @include desktop{
+            max-width: 500px;
+        }
+    }
+
+    &__copy{
+        text-align: center;
+
+        @include desktop{
+            text-align: left;
+        }
+
+        &__headline{
+            font-size: 2.25rem;
+            letter-spacing: -0.27px;
+            color: $blue-juan;
+            margin: 2rem 0 1.5rem;
+
+            @include tablet{
+                font-size: 3rem;
+                line-height: 117%;
+            }
+        }
+        &__paragraph{
+            margin: 0;
+            font-size: .9rem;
+            line-height: 187%;
+            color: $blue-juan-light;
+        }
+    }
+}

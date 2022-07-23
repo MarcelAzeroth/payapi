@@ -1,0 +1,122 @@
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 5;
+
+  @include tablet {
+    padding: 0 6.125rem;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 10rem;
+    max-width: 1440px;
+    margin: 0 auto 5rem;
+  }
+
+  &__copy {
+    @include desktop {
+      max-width: 546px;
+      margin-right: 12rem;
+    }
+    &__headline {
+      font-size: 2rem;
+      line-height: 2.25rem;
+      letter-spacing: -0.25px;
+      color: $blue-juan;
+      text-align: center;
+      margin-bottom: 1.5rem;
+
+      @include tablet {
+        font-size: 3rem;
+        line-height: 117%;
+        letter-spacing: -0.36px;
+      }
+      @include desktop {
+        font-size: 4.5rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include tablet {
+        position: relative;
+        max-width: 445px;
+        margin: auto;
+      }
+      @include desktop {
+        margin: 0 0 1rem;
+      }
+      &__input {
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+        border: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 18px;
+        color: #36536b85;
+        padding: 1rem 1.75rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__button {
+        @include tablet {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+    &__paragraph {
+      text-align: center;
+      color: $blue-juan-light;
+
+      @include desktop {
+        text-align: left;
+        margin-left: 1.5rem;
+      }
+
+      & a {
+        font-weight: 700;
+        color: $blue-juan-light;
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    max-width: 128px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      max-width: 160px;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+    @include desktop {
+      max-width: 263px;
+    }
+  }
+}
+
+//Pattern styling.
+.header__circle {
+  width: 780px;
+  height: 780px;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  top: 0;
+  opacity: 0.7;
+}

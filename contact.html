@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="main.js" defer></script>
+    <title>PayApi</title>
+</head>
+<body>
+    <!-- Header component -->
+    <main-header></main-header>
+    
+    <main>
+        <section class="contact">
+            <h1 class="contact__headline">
+                Submit a help request and we'll get in touch shortly.
+            </h1>
+            <form action="" class="contact__form">
+
+                <label for="" class="contact__label">
+                    <input type="text" id="contact__name" class="contact__form__textfield" placeholder="Name">
+                    <span class="contact__label__error hide" id="error__name">This field can't be empty</span>
+                </label>
+
+                <label class="contact__label">
+                    <input type="text" id="contact__email" class="contact__form__textfield" placeholder="Email Address">
+                    <span class="contact__label__error hide" id="error__email-val">Please enter a valid email address</span>
+                    <span class="contact__label__error hide" id="error__email-empty">This field can't be empty</span>
+                </label>
+
+                
+                <input type="text" class="contact__form__textfield" placeholder="Company Name">
+                <input type="text" class="contact__form__textfield" placeholder="Title">
+                
+                <label for="" class="contact__label">
+                    <textarea type="text" id="contact__message" class="contact__form__message" rows="7" placeholder="Message"></textarea>
+                    <span class="contact__label__error hide" id="error__msg">This field can't be empty</span>
+                </label>
+                
+                <div class="contact__form__checkboxfield">
+                    <input type="checkbox" class="contact__form__checkboxfield__checkbox" id="check">
+                    <label for="check" class="contact__form__checkboxfield__label">
+                        Stay up-to-date with company announcements and updates to our API
+                    </label>
+                </div>
+                <button action="submit" class="contact__form__button">Submit</button>
+            </form>
+            <section class="contact__credentials">
+                <h2 class="contact__credentials__headline">Join thousands of innovators already building with us</h2>
+                <ul class="contact__credentials__logos">
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/tesla-dark.svg" alt=""></li>
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/microsoft-dark.svg" alt=""></li>
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/hp-dark.svg" alt=""></li>
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/oracle-dark.svg" alt=""></li>
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/google-dark.svg" alt=""></li>
+                    <li class="contact__credentials__logo"><img src="./assets/shared/desktop/nvidia-dark.svg" alt=""></li>
+                </ul>
+            </section>
+        </section>
+        
+        <main-cta></main-cta>
+    </main>
+    
+    <main-footer></main-footer>
+  
+</body>
+</html>
+
+ 

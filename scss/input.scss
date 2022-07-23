@@ -1,0 +1,17 @@
+@import 'config.scss';
+@import 'responsive.scss';
+
+@import './components/navbar.scss';
+@import './components/footer.scss';
+@import './components/cta.scss';
+
+@import './home/hero.scss';
+@import './home/credentials.scss';
+@import './home/benefits.scss';
+@import './home/features.scss';
+
+@import './pricing/pricing.scss';
+
+@import './about/about.scss';
+
+@import './contact/contact.scss';
