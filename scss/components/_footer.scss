@@ -1,5 +1,6 @@
 footer{
     background-color: $blue-mirage;
+
 }
 
 .footer {
@@ -8,6 +9,15 @@ footer{
   align-items: center;
   padding: 2.5rem;
   gap: 2.5rem;
+
+  background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+  background-position: center 255%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  @include tablet{
+    background-image: none;
+  }
 
   @include tablet {
     flex-direction: row;

@@ -73,11 +73,78 @@ a {
 .header__circle {
   width: 780px;
   height: 780px;
-  left: 50%;
-  transform: translate(-50%, -60%);
   top: 0;
-  opacity: 0.7;
-  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .header__circle {
+    height: 949px;
+    width: 949px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-41%, -77%);
+  }
+}
+@media (min-width: 1440px) {
+  .header__circle {
+    left: 55%;
+    top: -10%;
+    transform: none;
+  }
+}
+
+.header__circle__not-index {
+  width: 780px;
+  height: 780px;
+  top: -615px;
+  right: -525px;
+  z-index: -10;
+}
+@media (min-width: 768px) {
+  .header__circle__not-index {
+    top: -500px;
+    right: -500px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__circle__not-index {
+    top: -555px;
+    right: -192px;
+  }
+}
+
+.credentials__circle {
+  display: none;
+  width: 790px;
+  height: 790px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+@media (min-width: 768px) {
+  .credentials__circle {
+    display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .credentials__circle {
+    left: -5%;
+    top: -85%;
+    transform: none;
+  }
+}
+
+.benefits__circle {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .benefits__circle {
+    display: block;
+    z-index: -1;
+    right: -30%;
+  }
 }
 
 .navbar {
@@ -209,6 +276,15 @@ footer {
   align-items: center;
   padding: 2.5rem;
   gap: 2.5rem;
+  background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+  background-position: center 255%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .footer {
+    background-image: none;
+  }
 }
 @media (min-width: 768px) {
   .footer {
@@ -438,6 +514,16 @@ footer {
 
 .credentials {
   background-color: #1b262f;
+  overflow-x: hidden;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .credentials {
+    background-image: url("./assets/shared/desktop/bg-pattern-circle.svg");
+    background-position: center -75%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }
 .credentials__wrapper {
   display: flex;
@@ -524,6 +610,8 @@ footer {
   align-items: center;
   gap: 5rem;
   padding: 5rem 1.5rem;
+  position: relative;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .benefits {

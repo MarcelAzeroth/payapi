@@ -1,3 +1,5 @@
+@import 'responsive';
+
 $pink-dark: #ba4270;
 $white-link: #fbfcfe;
 $blue-juan: #36536b;
@@ -82,9 +84,70 @@ a {
 .header__circle {
     width: 780px;
     height: 780px;
-    left: 50%;
-    transform: translate(-50%, -60%);
     top: 0;
-    opacity: 0.7;
-    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    z-index: 10;
+
+    @include tablet{
+        height: 949px;
+        width: 949px;
+        top: 25%;
+        left: 50%;
+        transform: translate(-41%, -77%);
+    }
+
+    @include desktop{
+        left: 55%;
+        top: -10%;
+        transform: none;
+    }
   }
+
+  .header__circle__not-index{
+    width: 780px;
+    height: 780px;
+    top: -615px;
+    right: -525px;
+    z-index: -10;
+
+    @include tablet{
+        top: -500px;
+        right: -500px;
+    }
+
+    @include desktop{
+        top: -555px;
+        right: -192px;
+    }
+  }
+
+.credentials__circle{
+    display: none;
+    width: 790px;
+    height: 790px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+    @include tablet{
+        display: block;
+    }
+
+    @include desktop{
+        left: -5%;
+        top: -85%;
+        transform: none;
+    }
+
+}
+
+.benefits__circle{
+    display: none;
+
+    @include desktop{
+        display: block;
+        z-index: -1;
+        right: -30%;
+    }
+}
